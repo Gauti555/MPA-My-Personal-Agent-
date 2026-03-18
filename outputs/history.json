@@ -17,10 +17,20 @@
       "notified": true,
       "skipped": false,
       "skip_reason": ""
+    },
+    {
+      "date": "2026-03-18 15:11 UTC",
+      "topic": "write the technical blog on RAG Agentic AI : All you need know",
+      "quality": 8,
+      "blog_path": "outputs/2026-03-18_write-the-technical-blog-on-rag-agentic-ai-all-you_blog.md",
+      "notified": true,
+      "skipped": false,
+      "skip_reason": ""
     }
   ],
   "published_titles": [
     "Test topic about Flash Attention 3",
-    "How grouped query attention works in modern LLMs"
+    "How grouped query attention works in modern LLMs",
+    "write the technical blog on RAG Agentic AI : All you need know"
   ]
 }
