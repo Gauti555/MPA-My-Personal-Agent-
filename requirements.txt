@@ -1,0 +1,26 @@
+# ── LLM ─────────────────────────────────────────────────────────
+huggingface-hub==0.32.0
+requests==2.32.3
+
+# ── Web scraping (no API keys needed) ───────────────────────────
+arxiv
+feedparser==6.0.10
+httpx
+beautifulsoup4==4.12.3
+pytrends==4.9.2
+
+# ── Telegram notifications ───────────────────────────────────────
+python-telegram-bot==20.7
+
+# ── Utilities ────────────────────────────────────────────────────
+python-dotenv==1.0.1
+pyyaml==6.0.1
+loguru==0.7.2
+tenacity==8.3.0
+python-slugify==8.0.4
+
+# ── LinkedIn (Playwright — install browser separately) ───────────
+playwright
+
+# ── Testing ──────────────────────────────────────────────────────
+pytest==8.2.2

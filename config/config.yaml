@@ -1,0 +1,84 @@
+llm:
+  model: "Qwen/Qwen2.5-7B-Instruct"
+  max_new_tokens: 1500
+  temperature: 0.7
+  timeout: 120
+
+topic_input:
+  topic_file: "topic.txt"
+  auto_discover: true
+
+scraper:
+
+  arxiv:
+    enabled: true
+    categories:
+      - "cs.AI"
+      - "cs.LG"
+      - "cs.CL"
+      - "cs.CV"
+    max_results: 10
+    days_back: 7
+
+  hackernews:
+    enabled: true
+    min_score: 50
+    max_results: 20
+    queries:
+      - "LLM"
+      - "large language model"
+      - "AI agent"
+      - "machine learning"
+      - "open source AI"
+
+  rss:
+    enabled: true
+    days_back: 7
+    feeds:
+      - name: "OpenAI Blog"
+        url: "https://openai.com/blog/rss.xml"
+      - name: "Google DeepMind"
+        url: "https://deepmind.google/blog/rss.xml"
+      - name: "Meta AI"
+        url: "https://ai.meta.com/blog/feed/"
+      - name: "Hugging Face Blog"
+        url: "https://huggingface.co/blog/feed.xml"
+      - name: "Anthropic Blog"
+        url: "https://www.anthropic.com/rss.xml"
+
+  google_trends:
+    enabled: true
+    keywords:
+      - "large language model"
+      - "AI agent"
+      - "generative AI"
+      - "fine tuning LLM"
+    geo: ""
+
+blog:
+  target_word_count: 1300
+  style: "technical yet approachable, like a senior ML engineer explaining to peers"
+  audience: "ML engineers and AI practitioners"
+  include_code_example: true
+
+linkedin:
+  max_chars: 2800
+  hashtags:
+    - "#AI"
+    - "#MachineLearning"
+    - "#GenerativeAI"
+    - "#DeepLearning"
+    - "#MLEngineering"
+    - "#OpenSource"
+
+pipeline:
+  max_topic_candidates: 5
+  output_dir: "outputs"
+  min_quality_score: 6
+
+notifications:
+  telegram:
+    enabled: true
+    send_blog_preview: true
+    send_linkedin_post: true
+    send_quality_score: true

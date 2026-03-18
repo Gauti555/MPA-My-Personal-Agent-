@@ -1,0 +1,115 @@
+name: Content Agent — Weekly Blog Pipeline
+
+# ─────────────────────────────────────────────────────────────────
+#  WHEN IT RUNS:
+#    - Automatically every Monday at 08:00 UTC
+#    - Manually from GitHub Actions tab anytime
+#
+#  WHAT IT DOES:
+#    1. Scrapes trending AI/ML topics
+#    2. Picks the best one with LLM
+#    3. Researches, writes, edits a full blog post
+#    4. Sends the draft to your Telegram for review
+#    5. Saves outputs as downloadable artifact
+#    6. Commits history.json back to repo
+# ─────────────────────────────────────────────────────────────────
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"      # Every Monday 08:00 UTC
+
+  workflow_dispatch:           # Manual trigger from GitHub UI
+    inputs:
+      topic:
+        description: "Custom topic (leave empty for auto-discover)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Dry run — show topics only, no writing?"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    permissions:
+      contents: write
+
+    steps:
+      # ── 1. Checkout your code ─────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Set up Python ──────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      # ── 3. Install dependencies ───────────────────────────────
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # ── 4. Install Playwright browser ─────────────────────────
+      - name: Install Playwright Chromium
+        run: |
+          playwright install chromium
+          playwright install-deps chromium
+
+      # ── 5. Run the pipeline ───────────────────────────────────
+      - name: Run content pipeline
+        env:
+          HF_TOKEN:             ${{ secrets.HF_TOKEN }}
+          TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:     ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            echo "=== DRY RUN ==="
+            python main.py --dry-run
+
+          elif [ -n "${{ github.event.inputs.topic }}" ]; then
+            echo "=== MANUAL TOPIC RUN ==="
+            python main.py --topic "${{ github.event.inputs.topic }}"
+
+          else
+            echo "=== AUTO-DISCOVER RUN ==="
+            python main.py
+
+          fi
+
+      # ── 6. Upload blog files as downloadable artifact ─────────
+      - name: Upload outputs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: blog-draft-${{ github.run_number }}
+          path: |
+            outputs/*_blog.md
+            outputs/*_linkedin.txt
+            outputs/*_meta.json
+            outputs/pipeline.log
+          retention-days: 30
+
+      # ── 7. Commit history.json back to repo ───────────────────
+      #    This keeps duplicate-detection working across runs.
+      #    history.json is tiny — just a JSON list of past topics.
+      - name: Save run history
+        if: always()
+        run: |
+          git config user.name  "content-agent[bot]"
+          git config user.email "content-agent@github-actions"
+          git add outputs/history.json || true
+          git diff --staged --quiet && echo "No history changes" || \
+            git commit -m "chore: update run history [skip ci]"
+          git push || echo "Nothing to push"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

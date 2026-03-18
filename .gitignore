@@ -1,0 +1,27 @@
+# Secret tokens — NEVER commit these
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Generated outputs (keep history, ignore drafts)
+outputs/*_blog.md
+outputs/*_linkedin.txt
+outputs/*_meta.json
+outputs/pipeline.log
+# Keep these committed:
+!outputs/.gitkeep
+!outputs/history.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/settings.json
