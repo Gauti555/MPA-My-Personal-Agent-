@@ -26,11 +26,21 @@
       "notified": true,
       "skipped": false,
       "skip_reason": ""
+    },
+    {
+      "date": "2026-03-23 09:08 UTC",
+      "topic": "AI Agent Unleashed: Navigating the PR Battle with LLMs",
+      "quality": 8,
+      "blog_path": "outputs/2026-03-23_ai-agent-unleashed-navigating-the-pr-battle-with-l_blog.md",
+      "notified": true,
+      "skipped": false,
+      "skip_reason": ""
     }
   ],
   "published_titles": [
     "Test topic about Flash Attention 3",
     "How grouped query attention works in modern LLMs",
-    "write the technical blog on RAG Agentic AI : All you need know"
+    "write the technical blog on RAG Agentic AI : All you need know",
+    "AI Agent Unleashed: Navigating the PR Battle with LLMs"
   ]
 }
