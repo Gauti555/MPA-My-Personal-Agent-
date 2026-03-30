@@ -35,12 +35,22 @@
       "notified": true,
       "skipped": false,
       "skip_reason": ""
+    },
+    {
+      "date": "2026-03-30 09:21 UTC",
+      "topic": "Meta's Latest LLM: Decoding Grouped Query Attention in Qwen2.5",
+      "quality": 8,
+      "blog_path": "outputs/2026-03-30_meta-s-latest-llm-decoding-grouped-query-attention_blog.md",
+      "notified": true,
+      "skipped": false,
+      "skip_reason": ""
     }
   ],
   "published_titles": [
     "Test topic about Flash Attention 3",
     "How grouped query attention works in modern LLMs",
     "write the technical blog on RAG Agentic AI : All you need know",
-    "AI Agent Unleashed: Navigating the PR Battle with LLMs"
+    "AI Agent Unleashed: Navigating the PR Battle with LLMs",
+    "Meta's Latest LLM: Decoding Grouped Query Attention in Qwen2.5"
   ]
 }
