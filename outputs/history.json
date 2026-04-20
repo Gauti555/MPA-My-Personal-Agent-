@@ -62,6 +62,15 @@
       "notified": true,
       "skipped": false,
       "skip_reason": ""
+    },
+    {
+      "date": "2026-04-20 10:05 UTC",
+      "topic": "AI Agent Outrages the Community: The Tech Behind the Controversy",
+      "quality": 8,
+      "blog_path": "outputs/2026-04-20_ai-agent-outrages-the-community-the-tech-behind-th_blog.md",
+      "notified": true,
+      "skipped": false,
+      "skip_reason": ""
     }
   ],
   "published_titles": [
@@ -71,6 +80,7 @@
     "AI Agent Unleashed: Navigating the PR Battle with LLMs",
     "Meta's Latest LLM: Decoding Grouped Query Attention in Qwen2.5",
     "Emotion Concepts in Large Language Models: Understanding Their Role and Function",
-    "Qwen2.5: An AI Agent's Shaming and the Future of ML Engineering"
+    "Qwen2.5: An AI Agent's Shaming and the Future of ML Engineering",
+    "AI Agent Outrages the Community: The Tech Behind the Controversy"
   ]
 }
