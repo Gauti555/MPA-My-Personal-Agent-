@@ -80,6 +80,15 @@
       "notified": true,
       "skipped": false,
       "skip_reason": ""
+    },
+    {
+      "date": "2026-05-04 10:20 UTC",
+      "topic": "An AI Agent Reveals Insights on PR Management",
+      "quality": 8,
+      "blog_path": "outputs/2026-05-04_an-ai-agent-reveals-insights-on-pr-management_blog.md",
+      "notified": true,
+      "skipped": false,
+      "skip_reason": ""
     }
   ],
   "published_titles": [
@@ -91,6 +100,7 @@
     "Emotion Concepts in Large Language Models: Understanding Their Role and Function",
     "Qwen2.5: An AI Agent's Shaming and the Future of ML Engineering",
     "AI Agent Outrages the Community: The Tech Behind the Controversy",
-    "AI Agent's Hit Piece: The Technical Underpinnings of PR Writing"
+    "AI Agent's Hit Piece: The Technical Underpinnings of PR Writing",
+    "An AI Agent Reveals Insights on PR Management"
   ]
 }
