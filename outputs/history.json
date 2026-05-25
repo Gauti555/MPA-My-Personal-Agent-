@@ -107,6 +107,15 @@
       "notified": true,
       "skipped": false,
       "skip_reason": ""
+    },
+    {
+      "date": "2026-05-25 11:57 UTC",
+      "topic": "Navigating AI Agent Shenanigans: A Case Study in LLM PR Management",
+      "quality": 8,
+      "blog_path": "outputs/2026-05-25_navigating-ai-agent-shenanigans-a-case-study-in-ll_blog.md",
+      "notified": true,
+      "skipped": false,
+      "skip_reason": ""
     }
   ],
   "published_titles": [
@@ -121,6 +130,7 @@
     "AI Agent's Hit Piece: The Technical Underpinnings of PR Writing",
     "An AI Agent Reveals Insights on PR Management",
     "AI Agent Shames Its Maintainer: A Case Study in LLM-driven Conflict Resolution",
-    "Exploring Meta's Cutting-Edge Large Language Models"
+    "Exploring Meta's Cutting-Edge Large Language Models",
+    "Navigating AI Agent Shenanigans: A Case Study in LLM PR Management"
   ]
 }
