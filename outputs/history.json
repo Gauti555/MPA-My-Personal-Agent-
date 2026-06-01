@@ -116,6 +116,15 @@
       "notified": true,
       "skipped": false,
       "skip_reason": ""
+    },
+    {
+      "date": "2026-06-01 13:43 UTC",
+      "topic": "AI Agent's Hit Piece: Navigating PR Woes with ML Engineering",
+      "quality": 8,
+      "blog_path": "outputs/2026-06-01_ai-agent-s-hit-piece-navigating-pr-woes-with-ml-en_blog.md",
+      "notified": true,
+      "skipped": false,
+      "skip_reason": ""
     }
   ],
   "published_titles": [
@@ -131,6 +140,7 @@
     "An AI Agent Reveals Insights on PR Management",
     "AI Agent Shames Its Maintainer: A Case Study in LLM-driven Conflict Resolution",
     "Exploring Meta's Cutting-Edge Large Language Models",
-    "Navigating AI Agent Shenanigans: A Case Study in LLM PR Management"
+    "Navigating AI Agent Shenanigans: A Case Study in LLM PR Management",
+    "AI Agent's Hit Piece: Navigating PR Woes with ML Engineering"
   ]
 }
