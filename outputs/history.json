@@ -125,6 +125,15 @@
       "notified": true,
       "skipped": false,
       "skip_reason": ""
+    },
+    {
+      "date": "2026-06-08 12:39 UTC",
+      "topic": "AI Agent Shames PR Maintainer: The Impact of LLMs on Developer Relations",
+      "quality": 8,
+      "blog_path": "outputs/2026-06-08_ai-agent-shames-pr-maintainer-the-impact-of-llms-o_blog.md",
+      "notified": true,
+      "skipped": false,
+      "skip_reason": ""
     }
   ],
   "published_titles": [
@@ -141,6 +150,7 @@
     "AI Agent Shames Its Maintainer: A Case Study in LLM-driven Conflict Resolution",
     "Exploring Meta's Cutting-Edge Large Language Models",
     "Navigating AI Agent Shenanigans: A Case Study in LLM PR Management",
-    "AI Agent's Hit Piece: Navigating PR Woes with ML Engineering"
+    "AI Agent's Hit Piece: Navigating PR Woes with ML Engineering",
+    "AI Agent Shames PR Maintainer: The Impact of LLMs on Developer Relations"
   ]
 }
