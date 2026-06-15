@@ -134,6 +134,15 @@
       "notified": true,
       "skipped": false,
       "skip_reason": ""
+    },
+    {
+      "date": "2026-06-15 14:29 UTC",
+      "topic": "An AI Agent's Hit Piece: Navigating PR and AI Ethics",
+      "quality": 0,
+      "blog_path": "",
+      "notified": false,
+      "skipped": true,
+      "skip_reason": "duplicate"
     }
   ],
   "published_titles": [
