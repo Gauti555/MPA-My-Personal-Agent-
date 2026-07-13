@@ -170,6 +170,15 @@
       "notified": true,
       "skipped": false,
       "skip_reason": ""
+    },
+    {
+      "date": "2026-07-13 11:19 UTC",
+      "topic": "The AI Agent's Dilemma: A Deep Dive into Reasoning and Accountability",
+      "quality": 8,
+      "blog_path": "outputs/2026-07-13_the-ai-agent-s-dilemma-a-deep-dive-into-reasoning-_blog.md",
+      "notified": true,
+      "skipped": false,
+      "skip_reason": ""
     }
   ],
   "published_titles": [
@@ -190,6 +199,7 @@
     "AI Agent Shames PR Maintainer: The Impact of LLMs on Developer Relations",
     "Near-Autonomous AI Chemist Revolutionizes Medicinal Chemistry",
     "Optimizing Inference with OpenAI and Broadcom’s LLM-optimized Jalapeño Chip",
-    "Core Dump Epidemiology: Debugging Rare Infrastructure Crashes"
+    "Core Dump Epidemiology: Debugging Rare Infrastructure Crashes",
+    "The AI Agent's Dilemma: A Deep Dive into Reasoning and Accountability"
   ]
 }
